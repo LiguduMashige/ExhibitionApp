@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "category": "fine artist",
+        "name": "Ligudu Mashige",
+        "description": "Ligudu Mashige is a multidisciplinary artist who focuses heavily on cubism and abstract art as a form of expression. He strives towards exploring the bounds of imagination, finding innovative ways to mix art and technology. Born in Durban, Ligudu has been exposed to many art forms of all different places. He intends on bring art to life, exploring colours and shapes and how they integrate with the world",
+        "image": "/images/profile-img/Ligudu.jpg",
+        "followers": "13.7k",
+        "location": "199 Bellairs Drive, Randburg, Johannesburg, 2169, South Africa",
+        "artworks": [
+            {
+                "artwork_id": 101,
+                "title": "Find Your Wings",
+                "size": "46cm x 66cm",
+                "medium": "Acrylic & Oil on Canvas",
+                "description": "A piece that resonates with me so much. inspired by George Condo, I wanted to explore cubism andthe mix of different colours and shapes. The work depicts a man split between him, trying to find the balance within his insanity. The wings represent him finding inner peace even throughout the chaos that lives in his head",
+                "image": "/images/ligudu-artworks-img/Find_Your_Wings.jpg"
+            },
+            {
+                "artwork_id": 102,
+                "title": "Kings Dead",
+                "size": "31cm x 45cm",
+                "medium":"Acrylic & Oil on Canvas",
+                "description": "This piece is based on the cival unrest that happened in July 2021 in Durban. The man with the crown represents former president Jacob Zuma as the king who was recognized as a powerful influential political figure for many of those, however, the people were sold false promises and are still unhappy. This piece represents more than just the conflict of tha time. It represents chaos and destruction this country has suffered this false narrative of the rainbow nation.",
+                "image": "/images/ligudu-artworks-img/Kings_Dead.jpg"
+            },
+            {
+                 "artwork_id": 103,
+                 "title": "Umanyano Losapho",
+                 "size": "95cm x 65cm",
+                 "medium": "Acrylic on Canvas",
+                 "description": "A commissioned artwork I did for my uncle. The works depict his mother, him and his sisters in their early childhood days",
+                 "image": "/images/ligudu-artworks-img/Umanyano_Losapho.jpg"
+            },
+            {
+                "artwork_id": 104,
+                "title": "Creep",
+                "size": "40cm x 40cm",
+                "medium": "Acrylic & Oil on Canvas",
+                "description": "This artwork is a portfolio piece that I plan on exhibiting one day as it is a combination of my favourite modern artists who explore exaggerated cartoon styles and psychological surreal styles",
+                "image": "/images/ligudu-artworks-img/Creep.jpg"
+            },
+            {
+                "artwork_id": 105,
+                "title": "Conversationas with Myself",
+                "size": "150cm x 80cm",
+                "medium": "Spray Paint and Oil Pastel on Fabriano Paper",
+                "description": "This is a portfolio artwork I did to explore different forms of mediums as an expression, inspired by George Condo and Jean-Michel Basquiat",
+                "image": "/images/ligudu-artworks-img/Conversations_with_Myself.jpg"
+            },
+            {
+                "artwork_id": 106,
+                "title": "Grey October",
+                "size": "150cm x 80cm",
+                "medium": "Acrylic, Oil and Spray Paint on Fabriano Paper",
+                "description": "This artwork expresses my first exploration of emotions and sadness through the dull month of October which was a calm storm that led me through the darkening darkness.",
+                "image": "/images/ligudu-artworks-img/Grey_October.jpg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "fine artist",
+        "name": "Amahle Ndaba",
+        "description": "Amahle Ndaba is a contemporary fine artist known for her vibrant mixed-media installations that explore themes of identity and heritage. Born in Cape Town, she combines traditional African motifs with modern techniques, creating powerful visual narratives that speak to the diaspora experience.",
+        "image": "/images/profile-img/Amahle.jpg",
+        "followers": "8.2k",
+        "location": "15 Kloof Street, Gardens, Cape Town, 8001, South Africa",
+        "artworks": [
+            {
+                "artwork_id": 201,
+                "title": "Ancestral Echoes",
+                "size": "120cm x 90cm",
+                "medium": "Mixed Media on Canvas",
+                "description": "This piece explores the connection between past and present, using traditional Ndebele patterns overlaid with contemporary urban imagery",
+                "image": "/images/amahle-artworks-img/Ancestral_Echoes.jpg"
+            },
+            {
+                "artwork_id": 202,
+                "title": "Ubuntu Rising",
+                "size": "80cm x 100cm",
+                "medium": "Acrylic and Gold Leaf on Canvas",
+                "description": "A celebration of community spirit and collective strength, inspired by the philosophy of Ubuntu",
+                "image": "/images/amahle-artworks-img/Ubuntu_Rising.jpg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "fine artist",
+        "name": "Thabo Molefe",
+        "description": "Thabo Molefe is a sculptor and painter whose work examines social justice and political commentary through bold, expressive forms. Based in Pretoria, his art challenges viewers to confront uncomfortable truths about society while offering hope for transformation.",
+        "image": "/images/profile-img/Thabo.jpg",
+        "followers": "11.5k",
+        "location": "78 Church Street, Pretoria Central, Pretoria, 0002, South Africa",
+        "artworks": [
+            {
+                "artwork_id": 301,
+                "title": "Breaking Chains",
+                "size": "200cm x 150cm",
+                "medium": "Bronze and Steel Sculpture",
+                "description": "A powerful sculpture representing liberation from oppression, featuring intertwined figures reaching skyward",
+                "image": "/images/thabo-artworks-img/Breaking_Chains.jpg"
+            },
+            {
+                "artwork_id": 302,
+                "title": "Voices Unheard",
+                "size": "100cm x 120cm",
+                "medium": "Oil and Charcoal on Canvas",
+                "description": "A haunting portrait series depicting marginalized communities, rendered in stark black and white",
+                "image": "/images/thabo-artworks-img/Voices_Unheard.jpg"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "visual artist",
+        "name": "Nomsa Khumalo",
+        "description": "Nomsa Khumalo is a digital artist and painter who merges traditional African art with futuristic aesthetics. Her work explores Afrofuturism and the intersection of technology with cultural identity, creating visually stunning pieces that imagine new possibilities.",
+        "image": "/images/profile-img/Nomsa.jpg",
+        "followers": "15.9k",
+        "location": "45 Florida road, Morningside, Durban, 4001, South Africa",
+        "artworks": [
+            {
+                "artwork_id": 401,
+                "title": "Digital Ancestors",
+                "size": "90cm x 120cm",
+                "medium": "Digital Print on Canvas",
+                "description": "A futuristic interpretation of ancestral spirits in the digital age, blending traditional masks with cyberpunk aesthetics",
+                "image": "/images/nomsa-artworks-img/Digital_Ancestors.jpg"
+            },
+            {
+                "artwork_id": 402,
+                "title": "Quantum Ubuntu",
+                "size": "150cm x 100cm",
+                "medium": "Acrylic and LED Installation",
+                "description": "An interactive piece that responds to viewer movement, exploring connectivity in the digital age",
+                "image": "/images/nomsa-artworks-img/Quantum_Ubuntu.jpg"
+            }
+        ]
+    }
+]

@@ -1,0 +1,78 @@
+.sa-map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #1a0b2e 0%, #0f172a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sa-map-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.province-path {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.province-path:hover {
+  fill: #3b1d6b;
+  stroke: #a78bfa;
+  stroke-width: 2;
+}
+
+.province-label {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.province-path:hover + .province-label {
+  opacity: 1;
+}
+
+.city-marker {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.city-dot {
+  transition: all 0.3s ease;
+}
+
+.city-marker:hover .city-dot {
+  r: 5;
+  fill: #fbbf24;
+  transform: scale(1.2);
+}
+
+.city-label {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.city-marker:hover .city-label {
+  opacity: 1;
+  font-size: 8px;
+}
+
+.map-legend {
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .province-label {
+    font-size: 6px;
+  }
+
+  .city-label {
+    font-size: 6px;
+  }
+}
