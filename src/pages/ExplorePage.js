@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useAppContext } from '../context/AppContext';
-import D3SouthAfricaMap from '../components/D3SouthAfricaMap';
+import LeafletArtistsMap from '../components/LeafletArtistsMap';
 import BackgroundAnimations from '../components/BackgroundAnimations';
 import { parseLocation } from '../utils/locationParser';
 import './ExplorePage.css';
@@ -52,7 +52,7 @@ const ExplorePage = ({ onBack }) => {
     return state.kreatives.map((kreative) => {
       const locationData = parseLocation(kreative.location);
       const jitteredCoords = addLocationJitter(locationData.lat, locationData.lng);
-      
+
       return {
         ...kreative,
         ...jitteredCoords,
@@ -70,7 +70,7 @@ const ExplorePage = ({ onBack }) => {
   const categories = [
     'all',
     'fine artist',
-    'digital artist', 
+    'digital artist',
     'photographer',
     'animator',
     'designer',
@@ -81,7 +81,7 @@ const ExplorePage = ({ onBack }) => {
     // Only filter if there's an active search or filters applied
     const hasActiveSearch = searchQuery.trim() !== '' || selectedCategory !== 'all' || locationFilter !== 'all';
     setIsSearchActive(hasActiveSearch);
-    
+
     if (hasActiveSearch) {
       filterKreatives();
       setHasSearched(true);
@@ -116,18 +116,18 @@ const ExplorePage = ({ onBack }) => {
       // Filter based on search
       filtered = filtered.filter(kreative => {
         const matchesName = kreative.name.toLowerCase().includes(query);
-        const matchesCategory = kreative.category.toLowerCase().includes(query) || 
-                               query.includes(kreative.category.toLowerCase());
-        const matchesCity = searchCity ? kreative.city === searchCity : 
-                           kreative.city.toLowerCase().includes(query);
+        const matchesCategory = kreative.category.toLowerCase().includes(query) ||
+          query.includes(kreative.category.toLowerCase());
+        const matchesCity = searchCity ? kreative.city === searchCity :
+          kreative.city.toLowerCase().includes(query);
         const matchesProvince = kreative.province.toLowerCase().includes(query);
-        
+
         // If searching "fine artist in joburg", both must match
-        if (searchCity && (query.includes('artist') || query.includes('photographer') || 
-            query.includes('designer') || query.includes('musician'))) {
+        if (searchCity && (query.includes('artist') || query.includes('photographer') ||
+          query.includes('designer') || query.includes('musician'))) {
           return matchesCategory && matchesCity;
         }
-        
+
         return matchesName || matchesCategory || matchesCity || matchesProvince;
       });
     }
@@ -139,7 +139,7 @@ const ExplorePage = ({ onBack }) => {
 
     // Filter by location dropdown (city or province)
     if (locationFilter !== 'all') {
-      filtered = filtered.filter(kreative => 
+      filtered = filtered.filter(kreative =>
         kreative.city === locationFilter || kreative.province === locationFilter
       );
     }
@@ -185,9 +185,9 @@ const ExplorePage = ({ onBack }) => {
             ← Back
           </button>
           <div className="logo-section">
-            <img 
+            <img
               src={`${process.env.PUBLIC_URL}/images/logos-img/AfriKreateLogo.png`}
-              alt="AfriKreate Logo" 
+              alt="AfriKreate Logo"
               className="header-logo"
               onError={(e) => {
                 console.log('Logo failed to load from:', e.target.src);
@@ -217,8 +217,8 @@ const ExplorePage = ({ onBack }) => {
                 <button className="clear-btn" onClick={handleClearSearch}>✕</button>
               )}
             </div>
-            
-            <button 
+
+            <button
               className="filters-toggle"
               onClick={() => setShowFilters(!showFilters)}
             >
@@ -229,8 +229,8 @@ const ExplorePage = ({ onBack }) => {
               <div className="filters-panel">
                 <div className="filter-group">
                   <label>Category:</label>
-                  <select 
-                    value={selectedCategory} 
+                  <select
+                    value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                   >
                     {categories.map(category => (
@@ -243,8 +243,8 @@ const ExplorePage = ({ onBack }) => {
 
                 <div className="filter-group">
                   <label>City:</label>
-                  <select 
-                    value={locationFilter} 
+                  <select
+                    value={locationFilter}
                     onChange={(e) => setLocationFilter(e.target.value)}
                   >
                     <option value="all">All Cities</option>
@@ -258,8 +258,8 @@ const ExplorePage = ({ onBack }) => {
 
                 <div className="filter-group">
                   <label>Province:</label>
-                  <select 
-                    value={locationFilter} 
+                  <select
+                    value={locationFilter}
                     onChange={(e) => setLocationFilter(e.target.value)}
                   >
                     <option value="all">All Provinces</option>
@@ -281,7 +281,7 @@ const ExplorePage = ({ onBack }) => {
               <p>Based on your search, we have found {filteredKreatives.length} kreatives in your area matching your description</p>
             </div>
           )}
-          
+
           {/* Default state when no search */}
           {!hasSearched && (
             <div className="search-prompt">
@@ -296,12 +296,11 @@ const ExplorePage = ({ onBack }) => {
           {/* Interactive Map Section */}
           <div className="map-section">
             <div className="map-container">
-              <D3SouthAfricaMap
+              <LeafletArtistsMap
                 artists={filteredKreatives}
                 onArtistClick={handleMapArtistClick}
-                selectedLocation={locationFilter}
               />
-              
+
               {/* Map Info */}
               <div className="google-map-info">
                 <div className="map-attribution">
@@ -324,21 +323,21 @@ const ExplorePage = ({ onBack }) => {
                 <h3>Start Your Creative Journey</h3>
                 <p>Search for artists, filter by category, or select a location to discover talented kreatives across South Africa.</p>
                 <div className="quick-filters">
-                  <button 
+                  <button
                     className="quick-filter-btn"
-                    onClick={() => {setSelectedCategory('digital artist'); setHasSearched(true);}}
+                    onClick={() => { setSelectedCategory('digital artist'); setHasSearched(true); }}
                   >
                     Digital Artists
                   </button>
-                  <button 
+                  <button
                     className="quick-filter-btn"
-                    onClick={() => {setSelectedCategory('photographer'); setHasSearched(true);}}
+                    onClick={() => { setSelectedCategory('photographer'); setHasSearched(true); }}
                   >
                     Photographers
                   </button>
-                  <button 
+                  <button
                     className="quick-filter-btn"
-                    onClick={() => {setLocationFilter('Cape Town'); setHasSearched(true);}}
+                    onClick={() => { setLocationFilter('Cape Town'); setHasSearched(true); }}
                   >
                     Cape Town
                   </button>
@@ -348,8 +347,8 @@ const ExplorePage = ({ onBack }) => {
               <div className="results-list">
                 {filteredKreatives.length > 0 ? (
                   filteredKreatives.map((kreative) => (
-                    <div 
-                      key={kreative.id} 
+                    <div
+                      key={kreative.id}
                       className="result-item"
                       onClick={() => handleKreativeClick(kreative)}
                     >

@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@import "leaflet/dist/leaflet.css";
+
+/* your map container */
+.leaflet-map {
+  height: 520px;   /* adjust for your layout */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
